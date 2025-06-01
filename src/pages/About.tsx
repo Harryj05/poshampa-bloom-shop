@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
-
 const About = () => {
-  return (
-    <main>
+  return <main>
       {/* Hero Section */}
       <section className="bg-poshampa-cream py-20">
         <div className="container-custom text-center">
@@ -34,11 +31,7 @@ const About = () => {
             <div className="relative">
               <div className="bg-poshampa-amber/20 absolute inset-0 transform translate-x-4 translate-y-4 rounded-lg"></div>
               <div className="relative bg-gray-200 rounded-lg aspect-[4/3] overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1556255609-53e15bfd2f28?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
-                  alt="POSHAMPA Story"
-                  className="w-full h-full object-cover"
-                />
+                
               </div>
             </div>
           </div>
@@ -94,11 +87,7 @@ const About = () => {
             <div className="order-2 lg:order-1 relative">
               <div className="bg-poshampa-amber/20 absolute inset-0 transform -translate-x-4 translate-y-4 rounded-full"></div>
               <div className="relative rounded-full aspect-square overflow-hidden w-3/4 mx-auto">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80"
-                  alt="Ishita Nassa - Founder of POSHAMPA"
-                  className="w-full h-full object-cover"
-                />
+                
               </div>
             </div>
             <div className="order-1 lg:order-2">
@@ -218,8 +207,6 @@ const About = () => {
           </Button>
         </div>
       </section>
-    </main>
-  );
+    </main>;
 };
-
 export default About;
