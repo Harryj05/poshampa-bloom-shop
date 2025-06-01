@@ -5,76 +5,65 @@ import { Button } from '@/components/ui/button';
 import ProductGrid from '@/components/product/ProductGrid';
 
 // Extended product data
-const featuredProducts = [
-  {
-    id: 1,
-    name: 'Rejuvenating Face Serum',
-    price: 39.99,
-    image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-    category: 'Skincare',
-    description: 'A powerful serum that deeply hydrates and rejuvenates your skin.'
-  },
-  {
-    id: 2,
-    name: 'Herbal Hair Oil',
-    price: 24.99,
-    image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-    category: 'Haircare',
-    description: 'Nourishing oil blend that promotes hair growth and prevents hair loss.'
-  },
-  {
-    id: 3,
-    name: 'Natural Body Butter',
-    price: 29.99,
-    image: 'https://images.unsplash.com/photo-1611075384322-fca04a88a640?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-    category: 'Body Care',
-    description: 'Rich and creamy body butter that deeply moisturizes your skin.'
-  },
-  {
-    id: 4,
-    name: 'Vitamin C Supplement',
-    price: 19.99,
-    image: 'https://images.unsplash.com/photo-1616671276441-2f2c276a724e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-    category: 'Supplements',
-    description: 'Boost your immunity with this powerful vitamin C supplement.'
-  },
-  {
-    id: 5,
-    name: 'Organic Face Mask',
-    price: 34.99,
-    image: 'https://images.unsplash.com/photo-1614859324967-3aa5cd77d1ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-    category: 'Skincare',
-    description: 'Natural clay mask that purifies and refreshes your skin.'
-  },
-  {
-    id: 6,
-    name: 'Ayurvedic Hair Mask',
-    price: 27.99,
-    image: 'https://images.unsplash.com/photo-1629198688000-71f23e745b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-    category: 'Haircare',
-    description: 'Deep conditioning mask with traditional Ayurvedic ingredients.'
-  },
-  {
-    id: 7,
-    name: 'Natural Lip Balm',
-    price: 12.99,
-    image: 'https://images.unsplash.com/photo-1599305090598-fe179d501227?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-    category: 'Skincare',
-    description: 'Moisturizing lip balm made with organic ingredients.'
-  },
-  {
-    id: 8,
-    name: 'Wellness Tea Blend',
-    price: 16.99,
-    image: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-    category: 'Wellness',
-    description: 'Herbal tea blend for relaxation and well-being.'
-  }
-];
-
+const featuredProducts = [{
+  id: 1,
+  name: 'Rejuvenating Face Serum',
+  price: 39.99,
+  image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
+  category: 'Skincare',
+  description: 'A powerful serum that deeply hydrates and rejuvenates your skin.'
+}, {
+  id: 2,
+  name: 'Herbal Hair Oil',
+  price: 24.99,
+  image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
+  category: 'Haircare',
+  description: 'Nourishing oil blend that promotes hair growth and prevents hair loss.'
+}, {
+  id: 3,
+  name: 'Natural Body Butter',
+  price: 29.99,
+  image: 'https://images.unsplash.com/photo-1611075384322-fca04a88a640?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
+  category: 'Body Care',
+  description: 'Rich and creamy body butter that deeply moisturizes your skin.'
+}, {
+  id: 4,
+  name: 'Vitamin C Supplement',
+  price: 19.99,
+  image: 'https://images.unsplash.com/photo-1616671276441-2f2c276a724e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
+  category: 'Supplements',
+  description: 'Boost your immunity with this powerful vitamin C supplement.'
+}, {
+  id: 5,
+  name: 'Organic Face Mask',
+  price: 34.99,
+  image: 'https://images.unsplash.com/photo-1614859324967-3aa5cd77d1ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
+  category: 'Skincare',
+  description: 'Natural clay mask that purifies and refreshes your skin.'
+}, {
+  id: 6,
+  name: 'Ayurvedic Hair Mask',
+  price: 27.99,
+  image: 'https://images.unsplash.com/photo-1629198688000-71f23e745b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
+  category: 'Haircare',
+  description: 'Deep conditioning mask with traditional Ayurvedic ingredients.'
+}, {
+  id: 7,
+  name: 'Natural Lip Balm',
+  price: 12.99,
+  image: 'https://images.unsplash.com/photo-1599305090598-fe179d501227?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
+  category: 'Skincare',
+  description: 'Moisturizing lip balm made with organic ingredients.'
+}, {
+  id: 8,
+  name: 'Wellness Tea Blend',
+  price: 16.99,
+  image: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
+  category: 'Wellness',
+  description: 'Herbal tea blend for relaxation and well-being.'
+}];
 const Index = () => {
-  return (
-    <main>
+  return <main>
       {/* Hero Section */}
       <section className="relative bg-poshampa-cream min-h-[70vh] flex items-center" role="banner">
         <div className="container-custom grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -86,28 +75,16 @@ const Index = () => {
               Discover the power of nature with POSHAMPA's premium range of beauty and health products, ethically sourced and crafted for your well-being.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button 
-                size="lg" 
-                className="bg-poshampa-amber hover:bg-poshampa-amber/90"
-                aria-label="Browse our shop"
-              >
+              <Button size="lg" className="bg-poshampa-amber hover:bg-poshampa-amber/90" aria-label="Browse our shop">
                 Shop Now
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                aria-label="Learn more about our products"
-              >
+              <Button size="lg" variant="outline" aria-label="Learn more about our products">
                 Learn More
               </Button>
             </div>
           </div>
           <div className="hidden lg:flex items-center justify-center">
-            <img 
-              src="/lovable-uploads/8ee30a71-3fa7-4d95-85f3-0cfad84e1af0.png" 
-              alt="POSHAMPA"
-              className="max-w-full h-auto"
-            />
+            <img src="/lovable-uploads/8ee30a71-3fa7-4d95-85f3-0cfad84e1af0.png" alt="POSHAMPA" className="max-w-full h-auto" />
           </div>
         </div>
       </section>
@@ -117,11 +94,7 @@ const Index = () => {
         <div className="container-custom">
           <div className="flex justify-between items-center mb-8">
             <h2 id="featured-products" className="text-3xl font-bold">Featured Products</h2>
-            <Link 
-              to="/products" 
-              className="text-poshampa-amber hover:text-poshampa-amber/80 flex items-center"
-              aria-label="View all products"
-            >
+            <Link to="/products" className="text-poshampa-amber hover:text-poshampa-amber/80 flex items-center" aria-label="View all products">
               View All <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
             </Link>
           </div>
@@ -209,11 +182,7 @@ const Index = () => {
           <div className="relative">
             <div className="bg-poshampa-amber/20 absolute inset-0 transform translate-x-4 translate-y-4 rounded-lg"></div>
             <div className="relative bg-gray-200 rounded-lg aspect-[4/3] overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1592136957897-b2b6ca21e10d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600&q=80"
-                alt="About POSHAMPA"
-                className="w-full h-full object-cover"
-              />
+              
             </div>
           </div>
         </div>
@@ -228,11 +197,7 @@ const Index = () => {
               Subscribe to our newsletter to receive updates on new products, special offers, and beauty tips.
             </p>
             <div className="flex flex-col sm:flex-row gap-2">
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="flex-1 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-poshampa-amber"
-              />
+              <input type="email" placeholder="Your email address" className="flex-1 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-poshampa-amber" />
               <Button className="bg-poshampa-amber hover:bg-poshampa-amber/90 px-6">
                 Subscribe
               </Button>
@@ -240,8 +205,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </main>
-  );
+    </main>;
 };
-
 export default Index;

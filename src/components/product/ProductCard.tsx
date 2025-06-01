@@ -14,7 +14,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
   } = useCart();
   return <Card className="overflow-hidden transition-all hover:shadow-md">
       <div className="aspect-square relative overflow-hidden bg-gray-100">
-        <img src={product.image} alt={product.name} className="" />
+        
       </div>
       <CardContent className="pt-4">
         <div className="text-sm text-muted-foreground mb-1">{product.category}</div>
