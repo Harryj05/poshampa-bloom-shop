@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
@@ -6,6 +5,7 @@ import { ShoppingCart } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import CartItem from './CartItem';
 import { ScrollArea } from '@/components/ui/scroll-area';
+import { useNavigate } from 'react-router-dom';
 
 interface CartDrawerProps {
   children?: React.ReactNode;
@@ -20,6 +20,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ children }) => {
     getCartCount, 
     clearCart 
   } = useCart();
+  const navigate = useNavigate();
 
   const cartCount = getCartCount();
   const cartTotal = getCartTotal();
@@ -71,8 +72,8 @@ const CartDrawer: React.FC<CartDrawerProps> = ({ children }) => {
               </div>
               
               <div className="flex flex-col space-y-2">
-                <Button className="bg-poshampa-amber hover:bg-poshampa-amber/90">
-                  Checkout
+                <Button className="bg-poshampa-amber hover:bg-poshampa-amber/90" onClick={() => { toggleCart(); navigate('/checkout'); }}>
+                  Buy Now
                 </Button>
                 <Button variant="outline" onClick={clearCart}>
                   Clear Cart
