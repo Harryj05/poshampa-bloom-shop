@@ -5,63 +5,56 @@ import { Button } from '@/components/ui/button';
 import ProductGrid from '@/components/product/ProductGrid';
 
 // Extended product data
-const featuredProducts = [{
-  id: 1,
-  name: 'Rejuvenating Face Serum',
-  price: 39.99,
-  image: 'https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-  category: 'Skincare',
-  description: 'A powerful serum that deeply hydrates and rejuvenates your skin.'
-}, {
-  id: 2,
-  name: 'Herbal Hair Oil',
-  price: 24.99,
-  image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-  category: 'Haircare',
-  description: 'Nourishing oil blend that promotes hair growth and prevents hair loss.'
-}, {
-  id: 3,
-  name: 'Natural Body Butter',
-  price: 29.99,
-  image: 'https://images.unsplash.com/photo-1611075384322-fca04a88a640?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-  category: 'Body Care',
-  description: 'Rich and creamy body butter that deeply moisturizes your skin.'
-}, {
-  id: 4,
-  name: 'Vitamin C Supplement',
-  price: 19.99,
-  image: 'https://images.unsplash.com/photo-1616671276441-2f2c276a724e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-  category: 'Supplements',
-  description: 'Boost your immunity with this powerful vitamin C supplement.'
-}, {
-  id: 5,
-  name: 'Organic Face Mask',
-  price: 34.99,
-  image: 'https://images.unsplash.com/photo-1614859324967-3aa5cd77d1ee?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-  category: 'Skincare',
-  description: 'Natural clay mask that purifies and refreshes your skin.'
-}, {
-  id: 6,
-  name: 'Ayurvedic Hair Mask',
-  price: 27.99,
-  image: 'https://images.unsplash.com/photo-1629198688000-71f23e745b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-  category: 'Haircare',
-  description: 'Deep conditioning mask with traditional Ayurvedic ingredients.'
-}, {
-  id: 7,
-  name: 'Natural Lip Balm',
-  price: 12.99,
-  image: 'https://images.unsplash.com/photo-1599305090598-fe179d501227?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-  category: 'Skincare',
-  description: 'Moisturizing lip balm made with organic ingredients.'
-}, {
-  id: 8,
-  name: 'Wellness Tea Blend',
-  price: 16.99,
-  image: 'https://images.unsplash.com/photo-1597481499750-3e6b22637e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500&q=80',
-  category: 'Wellness',
-  description: 'Herbal tea blend for relaxation and well-being.'
-}];
+const featuredProducts = [
+  {
+    id: 1,
+    name: 'POSHAMPA Soap',
+    price: 99.0,
+    image: '/lovable-uploads/IMG-20250602-WA0032.jpg',
+    category: 'Natural Soap',
+    description: 'Handcrafted natural soap for gentle cleansing and nourishment.'
+  },
+  {
+    id: 2,
+    name: 'Forever 22 Tonic',
+    price: 299.0,
+    image: '/lovable-uploads/IMG-20250602-WA0033.jpg',
+    category: 'Face Serum',
+    description: 'Youthful glow serum with rose, lemon, and natural extracts.'
+  },
+  {
+    id: 3,
+    name: 'POSHAMPA Spray',
+    price: 199.0,
+    image: '/lovable-uploads/IMG-20250602-WA0034.jpg',
+    category: 'Body Mist',
+    description: 'Refreshing body spray for all-day freshness.'
+  },
+  {
+    id: 4,
+    name: 'Mouth Bath',
+    price: 149.0,
+    image: '/lovable-uploads/IMG-20250602-WA0035.jpg',
+    category: 'Oral Care',
+    description: 'Herbal mouth rinse with turmeric, clove, and natural minerals.'
+  },
+  {
+    id: 5,
+    name: 'Herbal Bath Salt',
+    price: 129.0,
+    image: '/lovable-uploads/IMG-20250602-WA0036.jpg',
+    category: 'Bath & Body',
+    description: 'Relaxing bath salt blend for a soothing soak.'
+  },
+  {
+    id: 6,
+    name: 'Aqua Tonic',
+    price: 299.0,
+    image: '/lovable-uploads/IMG-20250602-WA0037.jpg',
+    category: 'Face Serum',
+    description: 'Hydrating aqua tonic with rose and mint for radiant skin.'
+  }
+];
 const Index = () => {
   return <main>
       {/* Hero Section */}
