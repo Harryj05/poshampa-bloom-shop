@@ -171,11 +171,8 @@ const Index = () => {
               <Link to="/about">Learn More About Us</Link>
             </Button>
           </div>
-          <div className="relative">
-            <div className="bg-poshampa-amber/20 absolute inset-0 transform translate-x-4 translate-y-4 rounded-lg"></div>
-            <div className="relative bg-gray-200 rounded-lg aspect-[4/3] overflow-hidden">
-              
-            </div>
+          <div className="flex justify-center items-center">
+            <img src="/lovable-uploads/8ee30a71-3fa7-4d95-85f3-0cfad84e1af0.png" alt="POSHAMPA Logo" className="max-w-xs w-full h-auto rounded-lg shadow-md" />
           </div>
         </div>
       </section>
