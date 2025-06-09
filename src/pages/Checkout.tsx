@@ -6,7 +6,11 @@ const QR_CODE_IMAGE = '/lovable-uploads/qr-placeholder.png'; // Replace with you
 
 const Checkout = () => {
   const { cartItems, getCartTotal } = useCart();
-  const [address, setAddress] = useState('');
+  const [address1, setAddress1] = useState('');
+  const [address2, setAddress2] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
+  const [pincode, setPincode] = useState('');
   const [paymentMode, setPaymentMode] = useState<'cod' | 'online' | ''>('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -24,16 +28,57 @@ const Checkout = () => {
       <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-lg">
         <h1 className="text-2xl font-bold mb-6">Checkout</h1>
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label className="block font-medium mb-2">Delivery Address</label>
-            <textarea
-              className="w-full border rounded p-2"
-              value={address}
-              onChange={e => setAddress(e.target.value)}
-              required
-              rows={3}
-              placeholder="Enter your delivery address"
-            />
+          <div className="grid grid-cols-1 gap-4">
+            <div>
+              <label className="block font-medium mb-1">Address 1</label>
+              <input
+                className="w-full border rounded p-2"
+                value={address1}
+                onChange={e => setAddress1(e.target.value)}
+                required
+                placeholder="House number, Street, etc."
+              />
+            </div>
+            <div>
+              <label className="block font-medium mb-1">Address 2</label>
+              <input
+                className="w-full border rounded p-2"
+                value={address2}
+                onChange={e => setAddress2(e.target.value)}
+                placeholder="Apartment, suite, etc. (optional)"
+              />
+            </div>
+            <div>
+              <label className="block font-medium mb-1">City</label>
+              <input
+                className="w-full border rounded p-2"
+                value={city}
+                onChange={e => setCity(e.target.value)}
+                required
+                placeholder="City"
+              />
+            </div>
+            <div>
+              <label className="block font-medium mb-1">State</label>
+              <input
+                className="w-full border rounded p-2"
+                value={state}
+                onChange={e => setState(e.target.value)}
+                required
+                placeholder="State"
+              />
+            </div>
+            <div>
+              <label className="block font-medium mb-1">Pincode</label>
+              <input
+                className="w-full border rounded p-2"
+                value={pincode}
+                onChange={e => setPincode(e.target.value)}
+                required
+                placeholder="Pincode"
+                pattern="[0-9]{5,6}"
+              />
+            </div>
           </div>
           <div>
             <label className="block font-medium mb-2">Payment Mode</label>
