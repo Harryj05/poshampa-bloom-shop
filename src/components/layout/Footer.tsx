@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
@@ -56,31 +55,6 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-poshampa-amber transition-colors">Terms & Conditions</a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Categories */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Categories</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-poshampa-amber transition-colors">Skincare</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-poshampa-amber transition-colors">Haircare</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-poshampa-amber transition-colors">Body Care</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-poshampa-amber transition-colors">Supplements</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-poshampa-amber transition-colors">Essential Oils</a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-poshampa-amber transition-colors">Herbal Solutions</a>
               </li>
             </ul>
           </div>
