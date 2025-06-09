@@ -14,6 +14,8 @@ import Faq from "./pages/Faq";
 import NotFound from "./pages/NotFound";
 import Products from "./pages/Products";
 import Checkout from "./pages/Checkout";
+import ProductDescription from "./pages/ProductDescription";
+// Remove Checkout import since it doesn't exist yet
 
 const queryClient = new QueryClient();
 
@@ -31,6 +33,7 @@ const App = () => (
             <Route path="/faq" element={<Faq />} />
             <Route path="/products" element={<Products />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/product/:id" element={<ProductDescription />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
