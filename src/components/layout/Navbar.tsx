@@ -1,15 +1,18 @@
-
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Search, User, ShoppingCart } from 'lucide-react';
 import CartDrawer from '@/components/ui/cart/CartDrawer';
 import { useCart } from '@/context/CartContext';
+import allProducts from '@/data/products';
 
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
   const { getCartCount } = useCart();
+  const navigate = useNavigate();
   
   const cartCount = getCartCount();
 
@@ -33,6 +36,18 @@ const Navbar: React.FC = () => {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const match = allProducts.find(p => p.name.toLowerCase() === searchValue.trim().toLowerCase());
+    if (match) {
+      setShowSearch(false);
+      setSearchValue('');
+      navigate(`/product/${match.id}`);
+    } else {
+      // Optionally show a not found message
+    }
   };
 
   return (
@@ -72,9 +87,25 @@ const Navbar: React.FC = () => {
 
           {/* Right Side Icons */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" className="hidden md:flex">
-              <Search className="h-5 w-5" />
-            </Button>
+            <div className="relative hidden md:flex">
+              {showSearch ? (
+                <form onSubmit={handleSearch} className="flex items-center">
+                  <input
+                    autoFocus
+                    type="text"
+                    value={searchValue}
+                    onChange={e => setSearchValue(e.target.value)}
+                    placeholder="Search for Poshampa Products"
+                    className="px-3 py-2 rounded-md border border-poshampa-amber focus:outline-none focus:ring-2 focus:ring-poshampa-amber text-poshampa-brown bg-poshampa-cream w-64 transition-all duration-200"
+                    onBlur={() => setShowSearch(false)}
+                  />
+                </form>
+              ) : (
+                <Button variant="ghost" size="icon" onClick={() => setShowSearch(true)}>
+                  <Search className="h-5 w-5" />
+                </Button>
+              )}
+            </div>
             <Button variant="ghost" size="icon" className="hidden md:flex">
               <User className="h-5 w-5" />
             </Button>
