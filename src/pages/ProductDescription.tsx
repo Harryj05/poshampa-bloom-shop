@@ -18,20 +18,23 @@ const ProductDescription = () => {
   const description = product.name === 'Aqua Tonic' ? aquaTonicDescription : product.description;
 
   return (
-    <main className="min-h-screen bg-poshampa-cream flex items-center justify-center py-12">
-      <div className="bg-white rounded-lg shadow-lg p-8 w-full max-w-2xl flex flex-col md:flex-row gap-8 items-center">
-        <img src={product.image} alt={product.name} className="w-64 h-64 object-cover rounded-lg shadow" />
+    <main className="min-h-screen bg-poshampa-cream flex items-center justify-center py-12 font-sans">
+      <div className="bg-white rounded-2xl shadow-2xl p-10 w-full max-w-2xl flex flex-col md:flex-row gap-10 items-center border-2 border-poshampa-amber">
+        <img src={product.image} alt={product.name} className="w-64 h-64 object-cover rounded-xl shadow-md border-4 border-poshampa-cream" />
         <div className="flex-1">
-          <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
-          <div className="text-muted-foreground mb-2">{product.category}</div>
-          <div className="text-xl font-semibold mb-4">${product.price.toFixed(2)}</div>
-          <pre className="whitespace-pre-wrap mb-4 text-gray-700">{description}</pre>
-          <div className="flex items-center gap-4 mb-4">
-            <Button onClick={() => setQuantity(q => Math.max(1, q - 1))}>-</Button>
-            <span className="font-bold text-lg">{quantity}</span>
-            <Button onClick={() => setQuantity(q => q + 1)}>+</Button>
+          <h1 className="text-4xl font-extrabold mb-2 text-poshampa-brown tracking-tight leading-tight">{product.name}</h1>
+          <div className="text-poshampa-amber font-semibold mb-2 text-lg">{product.category}</div>
+          <div className="text-2xl font-bold mb-4 text-poshampa-brown">${product.price.toFixed(2)}</div>
+          <pre className="whitespace-pre-wrap mb-6 text-poshampa-charcoal text-base leading-relaxed bg-poshampa-cream/60 p-4 rounded-lg border border-poshampa-amber/30 font-medium" style={{fontFamily: 'inherit'}}>{description}</pre>
+          <div className="flex items-center gap-4 mb-6">
+            <Button onClick={() => setQuantity(q => Math.max(1, q - 1))} className="bg-poshampa-brown text-white hover:bg-poshampa-amber">-</Button>
+            <span className="font-bold text-xl text-poshampa-brown">{quantity}</span>
+            <Button onClick={() => setQuantity(q => q + 1)} className="bg-poshampa-brown text-white hover:bg-poshampa-amber">+</Button>
           </div>
-          <Button className="bg-poshampa-amber hover:bg-poshampa-amber/90" onClick={() => addToCart({ ...product, quantity })}>
+          <Button 
+            className="bg-poshampa-amber hover:bg-poshampa-brown text-white font-bold px-8 py-3 rounded-lg text-lg shadow-md transition-colors duration-200" 
+            onClick={() => addToCart(product)}
+          >
             Add to Cart
           </Button>
         </div>
